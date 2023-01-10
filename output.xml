@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230110 14:38:27.635" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="d:\OneDrive - Sisua Digital Oy\onedrive_business\STUDY\Robocorp\order_robots\tasks.robot">
+<test id="s1-t1" name="Test" line="27">
+<kw name="Test Vault">
+<kw name="Get Secret" library="RPA.Robocloud.Secrets">
+<var>${secret}</var>
+<arg>url</arg>
+<doc>Read a secret from the configured source, e.g. Robocorp Vault,
+and return it as a ``Secret`` object.</doc>
+<msg timestamp="20230110 14:38:31.006" level="INFO">Protecting keyword: RPA.Robocloud.Secrets.Get Secret</msg>
+<msg timestamp="20230110 14:38:31.008" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230110 14:38:31.006" endtime="20230110 14:38:31.008"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${secret}[url_login]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230110 14:38:31.009" level="INFO">https://robotsparebinindustries.com</msg>
+<status status="PASS" starttime="20230110 14:38:31.008" endtime="20230110 14:38:31.013"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${secret}[url_order_robot]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230110 14:38:31.015" level="INFO">https://robotsparebinindustries.com/#/robot-order</msg>
+<status status="PASS" starttime="20230110 14:38:31.014" endtime="20230110 14:38:31.015"/>
+</kw>
+<status status="PASS" starttime="20230110 14:38:31.005" endtime="20230110 14:38:31.016"/>
+</kw>
+<status status="PASS" starttime="20230110 14:38:31.003" endtime="20230110 14:38:31.017"/>
+</test>
+<doc>Orders robots from RobotSpareBin Industries Inc.
+Saves the order HTML receipt as a PDF file.
+Saves the screenshot of the ordered robot.
+Embeds the screenshot of the robot to the PDF receipt.
+Creates ZIP archive of the receipts and the images.</doc>
+<status status="PASS" starttime="20230110 14:38:27.647" endtime="20230110 14:38:31.020"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230110 14:38:30.993" level="WARN">This is a deprecated import that will be removed in favor of RPA.Robocorp.Vault</msg>
+</errors>
+</robot>
